@@ -22,6 +22,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Shape Shift",
+                    "type": "Button",
+                    "id": "f3cf2641-5647-41cd-8121-37743e9e4352",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -42,7 +51,7 @@
                     "path": "<Keyboard>/a",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Player 1",
+                    "groups": "Player Movement",
                     "action": "Horizontal Movement",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -53,40 +62,7 @@
                     "path": "<Keyboard>/d",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Player 1",
-                    "action": "Horizontal Movement",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "1D Axis",
-                    "id": "80248b82-76eb-4a6c-b94d-6c12d586e161",
-                    "path": "1DAxis",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Horizontal Movement",
-                    "isComposite": true,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "negative",
-                    "id": "bd8f233c-9455-4902-8601-74317278f9a1",
-                    "path": "<Keyboard>/leftArrow",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Player 2",
-                    "action": "Horizontal Movement",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "positive",
-                    "id": "e47dd620-ce91-4d2f-95dd-48525b794388",
-                    "path": "<Keyboard>/rightArrow",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Player 2",
+                    "groups": "Player Movement",
                     "action": "Horizontal Movement",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -94,22 +70,22 @@
                 {
                     "name": "",
                     "id": "56236d19-06d5-47fe-a588-8b859bfba9d5",
-                    "path": "<Keyboard>/w",
+                    "path": "<Keyboard>/space",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Player 1",
+                    "groups": "Player Movement",
                     "action": "Jump",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "607f1756-db84-42f9-bad3-3ee2fb306752",
-                    "path": "<Keyboard>/upArrow",
+                    "id": "19e19596-b76b-46bc-a1df-07208702ffbd",
+                    "path": "<Keyboard>/x",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Player 2",
-                    "action": "Jump",
+                    "groups": "Player Movement",
+                    "action": "Shape Shift",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
@@ -118,19 +94,8 @@
     ],
     "controlSchemes": [
         {
-            "name": "Player 1",
-            "bindingGroup": "Player 1",
-            "devices": [
-                {
-                    "devicePath": "<Keyboard>",
-                    "isOptional": false,
-                    "isOR": false
-                }
-            ]
-        },
-        {
-            "name": "Player 2",
-            "bindingGroup": "Player 2",
+            "name": "Player Movement",
+            "bindingGroup": "Player Movement",
             "devices": [
                 {
                     "devicePath": "<Keyboard>",

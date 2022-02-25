@@ -3,6 +3,13 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public enum PlayerShape {
+        Square,
+        Triangle,
+    }
+
+    public static PlayerShape currentShape;
+
     [SerializeField]
     private float moveSpeed;
     [SerializeField]
@@ -15,17 +22,20 @@ public class PlayerMovement : MonoBehaviour
     private LayerMask groundLayer;
 
     private Rigidbody2D _rigidBody;         // player rigidbody
+    private Animator animator;
 
     private float moveHorizontal;
     private bool isGrounded;
     
-    void Start()
-    {
+    void Start() {
         _rigidBody = GetComponent<Rigidbody2D>();
+
+        animator = GetComponent<Animator>();
+
+        currentShape = PlayerShape.Square;
     }
 
-    void FixedUpdate()
-    {
+    void FixedUpdate() {
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.1f, groundLayer);
 
         // movement
@@ -43,9 +53,22 @@ public class PlayerMovement : MonoBehaviour
 
     // jump
     public void OnJump (InputAction.CallbackContext context) {
-        if (isGrounded)
+        if(isGrounded)
             _rigidBody.AddForce(new Vector2(0.0f, jumpForce), ForceMode2D.Impulse);
     }
 
+    public void OnShapeShift(InputAction.CallbackContext context) {
+        Debug.Log("Shape");
+        if(currentShape == PlayerShape.Square) {
+            currentShape = PlayerShape.Triangle;
+            animator.SetBool("isTriangle", true);
+            animator.SetBool("isSquare", false);
+        }
+        else {
+            currentShape = PlayerShape.Square;
+            animator.SetBool("isTriangle", false);
+            animator.SetBool("isSquare", true);
+        }
+    }
 
 }
