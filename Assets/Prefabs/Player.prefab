@@ -209,8 +209,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bba17efaa1b2d854f9e6e0ea447f0d4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
-  jumpForce: 25
+  squarePlayer: {fileID: 11400000, guid: 28b93832bc189214bbc63a1faacc6606, type: 2}
+  trianglePlayer: {fileID: 11400000, guid: 74d2cc39115a3c543a7dcf43befaccb8, type: 2}
   groundCheck: {fileID: 2573180740728708926}
   groundLayer:
     serializedVersion: 2
