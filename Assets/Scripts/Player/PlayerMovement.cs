@@ -19,15 +19,22 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField]
     private Transform groundCheck;
+    [SerializeField]
+    private Transform topCheck;
 
     [SerializeField]
     private LayerMask groundLayer;
+    [SerializeField]
+    private LayerMask waterLayer;
 
     private Rigidbody2D _rigidBody;         // player rigidbody
     private Animator animator;
 
     private float moveHorizontal;
+
     private bool isGrounded;
+    private bool onWater;
+    private bool underWater;
     
     void Start() {
         _rigidBody = GetComponent<Rigidbody2D>();
@@ -43,6 +50,10 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate() {
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.1f, groundLayer);
 
+        onWater = Physics2D.OverlapCircle(groundCheck.position, 0.1f, waterLayer);
+
+        underWater = Physics2D.OverlapCircle(topCheck.position, 0.1f, waterLayer);
+
         // movement
         _rigidBody.velocity = new Vector2(moveHorizontal * currentShapeData.moveSpeed, _rigidBody.velocity.y);
 
@@ -56,10 +67,18 @@ public class PlayerMovement : MonoBehaviour
         moveHorizontal = context.ReadValue<float>();
     }
 
-    // jump
+    // jump and swim
     public void OnJump (InputAction.CallbackContext context) {
         if(isGrounded)
             _rigidBody.AddForce(new Vector2(0.0f, currentShapeData.jumpForce), ForceMode2D.Impulse);
+        
+        // jump on water surface
+        if(onWater && !underWater && currentShapeData.canSwim)
+            _rigidBody.AddForce(new Vector2(0.0f, currentShapeData.jumpForce), ForceMode2D.Impulse);
+        
+        // swim up
+        if(underWater && currentShapeData.canSwim)
+            _rigidBody.AddForce(new Vector2(0.0f, currentShapeData.swimForce), ForceMode2D.Impulse);
     }
 
     public void OnShapeShift(InputAction.CallbackContext context) {
