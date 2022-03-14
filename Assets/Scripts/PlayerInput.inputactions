@@ -90,6 +90,87 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "MazePlayer",
+            "id": "d6c79146-8445-44e1-86d3-36ffd0e0a309",
+            "actions": [
+                {
+                    "name": "New action",
+                    "type": "Button",
+                    "id": "7f4636d7-1512-4c7f-8d76-3c2efbecec31",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "New action1",
+                    "type": "Button",
+                    "id": "dee396c7-18c2-4f8a-9e7d-70491488f78f",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "59b56838-0ee9-43c0-9763-aab62e1bf226",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Player Movement",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "1D Axis",
+                    "id": "4315c09f-5271-4947-b5af-a289b4882f40",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "984bc3cd-7d2d-4168-9188-e3b2c0d64ea2",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Player Movement",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "b6af1067-31a4-41f9-8f94-27e61c90d43c",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Player Movement",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "2acd35f6-9826-40cc-9082-3dd6867bb38c",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Player Movement",
+                    "action": "New action1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": [
