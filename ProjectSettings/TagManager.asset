@@ -36,7 +36,7 @@ TagManager:
   - 
   - 
   - 
-  - 
+  - MazeWall
   - 
   m_SortingLayers:
   - name: Ground
