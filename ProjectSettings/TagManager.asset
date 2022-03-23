@@ -36,9 +36,12 @@ TagManager:
   - 
   - 
   - 
-  - 
+  - MazeWall
   - 
   m_SortingLayers:
+  - name: Ground
+    uniqueID: 4117238575
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
