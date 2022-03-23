@@ -7,6 +7,8 @@ public class PlayerShapeScriptableObject : ScriptableObject
 {
     public float moveSpeed;
     public float jumpForce;
-
+    public float swimForce;
+    
     public float playerMass;
+    public bool canSwim;
 }
