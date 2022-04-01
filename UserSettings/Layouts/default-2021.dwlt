@@ -68,6 +68,7 @@ MonoBehaviour:
     y: 0
     width: 323
     height: 627
+
   m_MinSize: {x: 276, y: 71}
   m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 13}
@@ -150,6 +151,7 @@ MonoBehaviour:
     y: 0
     width: 1366
     height: 677
+
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_UseTopView: 1
@@ -549,6 +551,7 @@ MonoBehaviour:
       displayed: 1
       snapOffset: {x: 0, y: 0}
       snapOffsetDelta: {x: -101, y: -26}
+
       snapCorner: 3
       id: Tool Settings
       index: 0
@@ -794,7 +797,7 @@ MonoBehaviour:
       m_Fade:
         m_Target: 0
         speed: 2
-        m_Value: 0
+        m_Value: 1
       m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
       m_Pivot: {x: 0, y: 0, z: 0}
       m_Size: {x: 1, y: 1}
@@ -817,6 +820,7 @@ MonoBehaviour:
     m_Target: 20.584126
     speed: 2
     m_Value: 20.584126
+
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -865,6 +869,7 @@ MonoBehaviour:
     y: 73
     width: 783
     height: 350
+
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -894,6 +899,7 @@ MonoBehaviour:
     m_HBaseRangeMax: 391.5
     m_VBaseRangeMin: -164.5
     m_VBaseRangeMax: 164.5
+
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -903,6 +909,7 @@ MonoBehaviour:
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
     m_EnableMouseInput: 0
+
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -915,6 +922,7 @@ MonoBehaviour:
       height: 329
     m_Scale: {x: 1, y: 1}
     m_Translation: {x: 391.5, y: 164.5}
+
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
@@ -928,6 +936,7 @@ MonoBehaviour:
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_LastWindowPixelSize: {x: 783, y: 350}
+
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
@@ -957,6 +966,7 @@ MonoBehaviour:
     y: 726.5
     width: 920
     height: 250
+
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
