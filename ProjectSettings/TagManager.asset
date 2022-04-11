@@ -40,6 +40,9 @@ TagManager:
   - MazeWall
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 2195297745
+    locked: 0
   - name: Ground
     uniqueID: 4117238575
     locked: 0

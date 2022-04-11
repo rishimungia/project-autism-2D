@@ -152,7 +152,8 @@ PlayerSettings:
   resolutionScalingMode: 0
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
-  applicationIdentifier: {}
+  applicationIdentifier:
+    Standalone: com.DefaultCompany.project-autism-2D
   buildNumber:
     Standalone: 0
     iPhone: 0
@@ -668,6 +669,7 @@ PlayerSettings:
   metroFTAName: 
   metroFTAFileTypes: []
   metroProtocolName: 
+  vcxProjDefaultLanguage: 
   XboxOneProductId: 
   XboxOneUpdateKey: 
   XboxOneSandboxId: 
@@ -720,4 +722,3 @@ PlayerSettings:
   playerDataPath: 
   forceSRGBBlit: 1
   virtualTexturingSupportEnabled: 0
-  uploadClearedTextureDataAfterCreationFromScript: 1
