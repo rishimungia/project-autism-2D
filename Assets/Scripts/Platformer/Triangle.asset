@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 15
   jumpForce: 24
-  swimForce: 1
+  swimForce: 2
   playerMass: 3
   canSwim: 1

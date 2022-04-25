@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - Ground Prop
+  - TimeCounterUI
   layers:
   - Default
   - TransparentFX

@@ -73,7 +73,7 @@ public class PlayerMovement : MonoBehaviour
             _rigidBody.AddForce(new Vector2(0.0f, currentShapeData.jumpForce), ForceMode2D.Impulse);
         
         // jump on water surface
-        if(onWater && !underWater && currentShapeData.canSwim)
+        if(onWater && !underWater && !isGrounded && currentShapeData.canSwim)
             _rigidBody.AddForce(new Vector2(0.0f, currentShapeData.jumpForce), ForceMode2D.Impulse);
         
         // swim up

@@ -9,19 +9,19 @@
                     "name": "Horizontal Movement",
                     "type": "Value",
                     "id": "81759239-f1d2-4b75-9717-564f043b9802",
-                    "expectedControlType": "Axis",
+                    "expectedControlType": "",
                     "processors": "Normalize(min=-1,max=1)",
                     "interactions": "",
                     "initialStateCheck": true
                 },
                 {
                     "name": "Jump",
-                    "type": "Button",
+                    "type": "Value",
                     "id": "3c8e4f5e-93c3-4c9f-9371-89bf6a0ad8e3",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
                 },
                 {
                     "name": "Shape Shift",
@@ -51,7 +51,7 @@
                     "path": "<Keyboard>/a",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Player Movement",
+                    "groups": "",
                     "action": "Horizontal Movement",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -62,7 +62,40 @@
                     "path": "<Keyboard>/d",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Player Movement",
+                    "groups": "",
+                    "action": "Horizontal Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "1D Axis",
+                    "id": "44d926c6-09c5-4bcc-8235-c138c52c09d6",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Horizontal Movement",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "7632da9b-c7b7-46fd-a2e0-c4c2abc438d4",
+                    "path": "<Gamepad>/leftStick/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Horizontal Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "2fa360f3-ff98-43ea-ad2a-61acdbef7253",
+                    "path": "<Gamepad>/leftStick/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
                     "action": "Horizontal Movement",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -73,7 +106,18 @@
                     "path": "<Keyboard>/space",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Player Movement",
+                    "groups": "",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "82a6fbd9-d38e-41da-afd7-96bb99e79b53",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
                     "action": "Jump",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -84,7 +128,18 @@
                     "path": "<Keyboard>/x",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Player Movement",
+                    "groups": "",
+                    "action": "Shape Shift",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c69ca959-8fa8-49c2-aea0-2f6206d7fcf4",
+                    "path": "<Gamepad>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
                     "action": "Shape Shift",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -132,7 +187,7 @@
                     "path": "<Keyboard>/a",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Player Movement",
+                    "groups": "",
                     "action": "moveHorizontal",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -143,7 +198,7 @@
                     "path": "<Keyboard>/d",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Player Movement",
+                    "groups": "",
                     "action": "moveHorizontal",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -316,32 +371,9 @@
                     "action": "PlayerTwoMove",
                     "isComposite": false,
                     "isPartOfComposite": true
-                },
-                {
-                    "name": "",
-                    "id": "458f4f4b-b4f2-49af-bb12-bd0ccdca45b8",
-                    "path": "<Mouse>/position",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "PlayerTwoMove",
-                    "isComposite": false,
-                    "isPartOfComposite": false
                 }
             ]
         }
     ],
-    "controlSchemes": [
-        {
-            "name": "Player Movement",
-            "bindingGroup": "Player Movement",
-            "devices": [
-                {
-                    "devicePath": "<Keyboard>",
-                    "isOptional": false,
-                    "isOR": false
-                }
-            ]
-        }
-    ]
+    "controlSchemes": []
 }

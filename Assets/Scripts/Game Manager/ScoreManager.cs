@@ -1,11 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class ScoreManager : MonoBehaviour
 {
     public static ScoreManager Instance;
+
+    // private TextMeshProUGUI[] timeCounter;
 
     private static string levelName;
 
@@ -31,19 +32,27 @@ public class ScoreManager : MonoBehaviour
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        // timeCounter = GameObject.FindGameObjectWithTag("TimeCounterUI").GetComponent<TextMeshProUGUI[]>();
+        // foreach(TextMeshProUGUI currentScoreText in timeCounter) {
+        //     currentScoreText.text = time.ToString("D7");
+        // }
+
         startTime = Time.time;
         levelName = scene.name;
-
-        Debug.Log("Time:");
-        // Debug.Log("OnSceneLoaded: " + scene.name);
     }
+
+    // void FixedUpdate() {
+    //     foreach(TextMeshProUGUI currentScoreText in timeCounter) {
+    //         currentScoreText.text = time.ToString("D7");
+    //     }
+    // }
 
     public static void LogTime() {
         endTime = Time.time;
 
         time = endTime - startTime;
 
-        Debug.Log(levelName + ": " + time);
+        DBManager.NewRun(levelName, time);
     }
 
 }
