@@ -8,6 +8,9 @@ public class BeamPlayerMovement : MonoBehaviour
     [SerializeField]
     private float moveSpeed;
 
+    [SerializeField]
+    private bool enemyHit;
+
     private Vector2 moveVector;
 
     private Rigidbody2D _rigidBody;
@@ -23,5 +26,11 @@ public class BeamPlayerMovement : MonoBehaviour
 
     public void PlayerOneMove(InputAction.CallbackContext context) {
         moveVector = context.ReadValue<Vector2>();
+    }
+
+    void OnTriggerEnter2D(Collider2D hit) {
+        // Debug.Log(hit.gameObject.tag);
+        if(enemyHit && hit.gameObject.tag == "Enemy")
+            Destroy(hit.gameObject);
     }
 }
